@@ -1,12 +1,6 @@
-/* =======================================================================
-Template Name: Dil Hospital
-Author:  SmartEye Adminpanel
-Author URI: www.smarteyeapps.com
-Version: 1.0
-coder name:Prabin Raja
-Description: This Template is created for web template
-======================================================================= */
-/* ===================================== Import Less ================================== */
+
+
+
 :root {
   --color-font: #808291;
   --color-primary: #3ed2a7;
@@ -28,7 +22,15 @@ Description: This Template is created for web template
   src: url("../fonts/Gotham Bold.otf") format("truetype"); }
 /* ===================================== Basic CSS ================================== */
 
-
+.body{
+  overflow: hidden;
+  .orbitron-<uniquifier> {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+}
 
 * {
   margin: 0px;
@@ -69,13 +71,19 @@ textarea {
 .cp {
   cursor: pointer; }
 
-html, body {
-  height: 100%;
-  background-color: #1a1a1b;
-  background-image: url(../images/okji.jpg);
-  background-position: 0, 5px;
-  
- }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1b;
+    background-image: url(../images/okji.jpg);
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
 
 p {
   margin-bottom: 0px;
@@ -112,13 +120,14 @@ strong {
 
   body {
     font-family: "mouse-300", Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-
-    background-size: cover; /* Optional: to cover the entire background */
-    background-repeat: no-repeat; /* Optional: to prevent repeating the image */
+    
   }
   
 
+ .pogo{
+  color: white;
+ }
+  
 .session-title {
   padding: 30px;
   margin: 0px; }
@@ -235,7 +244,8 @@ strong {
     border-color: #CCC; }
 
 .container {
-  max-width: 1100px; }
+  max-width: 1100px;
+}
   @media screen and (max-width: 575px) {
     .container {
       padding: 10px 15px; } }
@@ -283,6 +293,7 @@ strong {
 .banner-container {
   background-image: url(../images/new.jpg);
   background-size: 100%;
+  overflow: hidden;
   height: 100%; }
   @media screen and (max-width: 699px) {
     .banner-container {
@@ -296,7 +307,7 @@ strong {
     color: #FFF; }
     @media screen and (max-width: 600px) {
       .banner-container .slider-det {
-        padding-top: 38%; } }
+        padding-top: 28%; } }
     @media screen and (max-width: 409px) {
       .banner-container .slider-det {
         padding-top: 58%; } }
@@ -316,13 +327,13 @@ strong {
       bottom: -51px; }
     @media screen and (max-width: 600px) {
       .banner-container .slider-det .carousel-control-prev-icon {
-        margin-left: -110px; }
+        margin-left: -250px; }
       .banner-container .slider-det .carousel-control-next-icon {
-        margin-right: -110px; } }
+        margin-right: 0px; } }
   .banner-container .carousel-control-prev {
-    left: -120px; }
+    left: 120px; }
   .banner-container .carousel-control-next {
-    right: -121px; }
+     }
 
 .page-title {
   background-image: url(../images/head_bg.jpg);
@@ -332,7 +343,7 @@ strong {
   color: #FFF; }
   @media screen and (max-width: 600px) {
     .page-title {
-      padding-top: 200px; } }
+      padding-top: 80px; } }
   .page-title h2 {
     text-align: center;
     width: 100%; }
@@ -346,7 +357,7 @@ strong {
       text-align: center; }
 
 .titl-2 {
-  padding-top: 205px; }
+  padding-top: 55px; }
 
 /* ===================================== Header CSS ================================== */
 .header-container {
@@ -443,13 +454,14 @@ background-size: cover;
   .key-features .key-row {
     margin-top: 20px; }
     .key-features .key-row .key-single {
+      color: white;
       margin-bottom: 20px; }
       .key-features .key-row .key-single i {
         color: #3987FF;
         font-size: 2.5rem;
         margin-bottom: 30px; }
       .key-features .key-row .key-single h6 {
-        color: #444; }
+        color: white; }
       .key-features .key-row .key-single p {
         font-size: .8rem;
         margin-top: 5px; }
@@ -466,7 +478,9 @@ background-size: cover;
   .with-medical .txtr {
     padding: 10px; }
     .with-medical .txtr h4 {
-      font-size: 32px; }
+      font-size: 32px;
+      font-family: 'Orbitron', sans-serif;
+    }
       .with-medical .txtr h4 span {
         color: #03509e; }
     .with-medical .txtr p {
@@ -478,7 +492,7 @@ background-size: cover;
   background-color: RGBA(33, 111, 255, 0.87); }
 
 .services-container {
-  margin-top: -100px;
+  margin-top: 10px;
   padding-bottom: 30px; }
   @media screen and (max-width: 600px) {
     .services-container {
@@ -502,6 +516,7 @@ background-size: cover;
   padding: 50px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.1);
   margin-top: -90px;
+  color: #1a1a1b;
   background-color: #FFF; }
   @media screen and (max-width: 940px) {
     .testimonial-cover .test-container {
@@ -595,10 +610,14 @@ background-size: cover;
 
 /* ===================================== Footer CSS ================================== */
 footer .foot-det {
-  margin-top: -50px; }
+  margin-top: -50px;
+color: #1a1a1b;
+}
 footer .foot-cont {
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.1);
   background-color: #FFF;
+  border-radius: 30px;
+  color: #1a1a1b;
   padding: 50px; }
   @media screen and (max-width: 940px) {
     footer .foot-cont {
@@ -637,7 +656,7 @@ footer .cont-foot p {
 footer .cont-foot a {
   text-decoration: underline; }
 footer .copy-right {
-  padding: 25px; }
+   }
   footer .copy-right p {
     margin-top: 13px;
     font-size: .9rem;
